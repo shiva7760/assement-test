@@ -43,6 +43,7 @@ func connectToDatabase() (*gorm.DB, error) {
 		fmt.Println("Error connecting to container Retrying")
 		c := 0
 		for c < 12 {
+			c=c+1
 			time.Sleep(2 * time.Second)
 			db, err = gorm.Open("postgres", "host=127.0.0.1 port=5432 user=assesment dbname=blogdb password=very_secret_password sslmode=disable")
 			if db != nil {
