@@ -1,0 +1,10 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: assesment
+      POSTGRES_PASSWORD: very_secret_password
+      POSTGRES_DB: blogdb
+    ports:
+      - "5432:5432"
